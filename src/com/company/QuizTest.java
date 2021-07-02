@@ -1,6 +1,16 @@
 package com.company;
 import java.util.*;
-public class Main {
+class Question {
+
+    String prompt;
+    String answer;
+    public Question(String prompt, String answer){
+
+        this.prompt = prompt;
+        this.answer = answer;
+    }
+}
+public class QuizTest {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Random randomizer = new Random();
@@ -40,7 +50,7 @@ public class Main {
             }
             String answer = input.nextLine();
             if (!answer.equals(questions[i].answer)) {
-                System.out.println("Sorry try again");
+                System.out.println("Nice try :)");
                 break;
             } else {
                 score++;
@@ -71,7 +81,7 @@ public class Main {
             }
             String answer = input.nextLine();
             if (!answer.equals(questions[i].answer)) {
-                System.out.println("Sorry try again");
+                System.out.println("Nope,try again!");
                 break;
             } else {
                 score++;
@@ -102,7 +112,7 @@ public class Main {
             }
             String answer = input.nextLine();
             if (!answer.equals(questions[i].answer)) {
-                System.out.println("Sorry try again");
+                System.out.println("Try again,maybe next time");
                 break;
             } else {
                 score++;
